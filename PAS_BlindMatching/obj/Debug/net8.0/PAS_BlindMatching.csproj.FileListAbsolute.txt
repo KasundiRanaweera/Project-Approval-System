@@ -59,6 +59,7 @@ C:\Users\User\source\repos\PAS_BlindMatching\PAS_BlindMatching\obj\Debug\net8.0\
 C:\Users\User\source\repos\PAS_BlindMatching\PAS_BlindMatching\obj\Debug\net8.0\PAS_BlindMatching.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\source\repos\PAS_BlindMatching\PAS_BlindMatching\obj\Debug\net8.0\PAS_BlindMatching.RazorAssemblyInfo.cache
 C:\Users\User\source\repos\PAS_BlindMatching\PAS_BlindMatching\obj\Debug\net8.0\PAS_BlindMatching.RazorAssemblyInfo.cs
+C:\Users\User\source\repos\PAS_BlindMatching\PAS_BlindMatching\obj\Debug\net8.0\PAS_BlindMatching.sourcelink.json
 C:\Users\User\source\repos\PAS_BlindMatching\PAS_BlindMatching\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\User\source\repos\PAS_BlindMatching\PAS_BlindMatching\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\User\source\repos\PAS_BlindMatching\PAS_BlindMatching\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

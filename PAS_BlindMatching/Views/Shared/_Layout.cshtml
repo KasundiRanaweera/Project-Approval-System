@@ -43,30 +43,40 @@
                             <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
 
-                        @* ROLE-BASED NAVIGATION LOGIC *@
-                        @if (Context.Session.GetString("Role") == "Student")
+                        @* SAFETY CHECK: Only show these links if UserId is NOT NULL 
+                           This prevents buttons from appearing on Login/Register screens 
+                        *@
+                        @if (Context.Session.GetInt32("UserId") != null)
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-info" asp-controller="Project" asp-action="Submit">Submit Proposal</a>
-                            </li>
-                        }
-                        else if (Context.Session.GetString("Role") == "Supervisor")
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-info" asp-controller="Supervisor" asp-action="Index">Project Feed</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-info" asp-controller="Supervisor" asp-action="MyMatches">My Matches</a>
-                            </li>
-                        }
-                        else if (Context.Session.GetString("Role") == "Admin")
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-warning" asp-controller="Admin" asp-action="Projects">Manage Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-warning" asp-controller="Admin" asp-action="Users">Manage Users</a>
-                            </li>
+                            var userRole = Context.Session.GetString("Role");
+
+                            @if (userRole == "Student")
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-info" asp-controller="Project" asp-action="Submit">Submit Proposal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-info" asp-controller="Project" asp-action="MyProjects">My Projects</a>
+                                </li>
+                            }
+                            else if (userRole == "Supervisor")
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-info" asp-controller="Supervisor" asp-action="Index">Project Feed</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-info" asp-controller="Supervisor" asp-action="MyMatches">My Matches</a>
+                                </li>
+                            }
+                            else if (userRole == "Admin")
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-warning" asp-controller="Admin" asp-action="Projects">Manage Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-warning" asp-controller="Admin" asp-action="Users">Manage Users</a>
+                                </li>
+                            }
                         }
                     </ul>
 
